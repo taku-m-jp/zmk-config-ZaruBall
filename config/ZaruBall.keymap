@@ -167,9 +167,9 @@
             bindings = <
 &kp ESC     &kp F1           &kp F2           &kp F3           &kp F4           &kp F5                           &trans  &trans  &trans  &trans              &kp F6        &kp F7    &kp F8        &kp F9     &kp F10  &kp F11
 &kp KP_NUM  &kp KP_DOT       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_EQUAL                     &trans  &trans  &trans  &trans              &kp K_MUTE    &none     &kp UP_ARROW  &none      &none    &kp F12
-&trans      &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_MINUS    &trans  &trans  &trans  &trans    &kp LPAR  &kp C_VOL_UP  &kp LEFT  &kp DOWN      &kp RIGHT  &none    &none
+&trans      &none            &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY  &kp KP_MINUS    &trans  &trans  &trans  &trans    &kp LPAR  &kp C_VOL_UP  &kp LEFT  &kp DOWN      &kp RIGHT  &none    &kp PRINTSCREEN
 &trans      &kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_SLASH     &kp KP_PLUS     &trans  &trans  &trans  &trans    &kp RPAR  &kp C_VOL_DN  &none     &none         &none      &none    &trans
-&trans      &kp RSHFT                         &trans           &trans           &trans           &trans                                            &trans    &trans                                                    &kp PRINTSCREEN
+&trans      &kp RSHFT                         &trans           &trans           &trans           &trans                                            &trans    &trans                                                    &trans
             >;
         };
 
