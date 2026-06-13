@@ -24,7 +24,9 @@
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
                          /* ここに速度調整を追加（例：1 2 で 1/2倍 = 半分 の速度になります） */
                          &zip_xy_scaler 3 4 
-                         &zip_temp_layer MOUSE 500
+                         /* キーボードが無入力になってから 150ms 以上経過したときだけ、ボールの動きを許可します */
+                         &zip_pico_require_prior_idle 150
+                         &zip_temp_layer MOUSE 5000
                         >;
     scroller {
         layers = <SCROLL>;
