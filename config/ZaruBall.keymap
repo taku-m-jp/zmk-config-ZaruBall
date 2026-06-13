@@ -24,8 +24,7 @@
                          &zip_xy_transform (INPUT_TRANSFORM_XY_SWAP | INPUT_TRANSFORM_Y_INVERT | INPUT_TRANSFORM_X_INVERT)
                          /* ここに速度調整を追加（例：1 2 で 1/2倍 = 半分 の速度になります） */
                          &zip_xy_scaler 3 4 
-                         /* キーボードが無入力になってから 150ms 以上経過したときだけ、ボールの動きを許可します */
-                         &zip_pico_require_prior_idle 150
+                         /* タイムアウトを 5000ms (5秒) に延ばして勝手に抜けるのを防止 */
                          &zip_temp_layer MOUSE 5000
                         >;
     scroller {
@@ -36,6 +35,13 @@
                             &zip_xy_to_scroll_mapper
                             >;
     };
+};
+
+/* すでに存在する &zip_temp_layer の中身を拡張し、打鍵時の「進入猶予」を設定します */
+&zip_temp_layer {
+    /* キーボードのキー入力があった後、何ミリ秒間トラックボールの自動レイヤー移動を禁止するか */
+    /* 150〜200ms 程度を設定することで、タイピング中の微振動による誤作動を完全に防げます */
+    require-prior-idle-ms = <150>;
 };
 
 / {
